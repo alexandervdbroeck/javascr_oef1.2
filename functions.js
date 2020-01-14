@@ -19,6 +19,10 @@ function nextImage(img_nbr = 0){
         return false
     }
     // for correct array position subtract one form the given foto number
+    if(img_nbr < 0 || img_nbr > 4)
+    {
+        img_nbr = 1
+    }
     img_nbr -= 1
     document.getElementById("image").src = 'slideshow/' + images[img_nbr];
 }
